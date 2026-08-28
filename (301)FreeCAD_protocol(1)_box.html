@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreeCADを使った作図方法（1)｜50x30x20の箱の作成手順書</title>
+<meta name="description" content="FreeCADを用いて、50mmx30mmx20mmの大きさの箱の立体図を作成する手順書です。">
+<link rel="stylesheet" href="style.css">       <!-- style.cssを使う命令 -->
+</head>
+
+<body>
+<header>
+  <div class="header-inner">
+     <h1>FreeCADを使った作図方法（1)｜50x30x20の箱の作成手順書</h1>
+  </div>
+</header>
+
+<div class="container">                <!-- コンテナーに入れる、最後に</div>がある -->
+<div class="back-link">                 <!-- 「トップページに戻る」を入れる -->
+<a href="index.html">トップページに戻る</a>
+</div>
+
+<p class="small">
+公開日：2026年7月　｜　最終更新：2026年7月
+</p>
+
+<main>
+<!-- ★ここが重要（導入文SEO強化） -->
+<section>
+<h2>はじめに</h2>
+<p>
+FreeCADを用いて、50mmx30mmx20mmの大きさの箱の立体図を作成する手順書です。
+</p>
+</section>
+<hr>
+
+<section>
+<h2>1．新しいドキュメントを作る</h2>
+<ol>
+<li>ファイル（Mac最上段） → 「新規ドキュメント」</li>
+<li>ワークベンチ（FreeCAD二段目）を 「Part Design 」にする</li>
+<li>パートデザイン（Mac最上段）→ 「新しいボディ」 をクリック（モデルの中にBodyができる）</li>
+</ol>
+</section>
+<hr>
+
+<section>
+<h2>2．外側の立体を作る</h2>
+<ol>
+<li>スケッチ（Mac最上段）→ 「新しいスケッチ」をクリック</li>
+<li>タスク（右側）内の「XY平面」をクリック、「OK」</li>
+<li>スケッチ（Mac最上段） → ジオメトリー → 中心配置長方形を選ぶ</li>
+<li>赤い横線と緑の縦線の交点、つまり原点を1回クリックする。<br>
+右上方向へマウスを動かして、もう一度クリックする（位置は適当で良い）</li>
+<li>(escを１回押して、長方形作図モードを終了）</li>
+<li>タスク（右側）の要素「3-直線」をクリックし、長方形の上線を青色にする</li>
+<li>スケッチ（Mac最上段）→ 「拘束」→ 「水平寸法」、入力画面を50mmにする（横）</li>
+</ol>
+<ol>
+<li>タスク（右側）の要素「4-直線」をクリックし、長方形の左線を青色にする</li>
+<li>スケッチ（Mac最上段）→ 「拘束」→ 「垂直寸法」、入力画面を30mmにする。（縦を 30 mm に）</li>
+<li>右側「タスク」→ 「閉じる」（Sketchを終了）</li>
+</ol>
+<div class="box">
+ポイント：中心配置長方形では、最初に原点をクリックする。<br>
+これによって、長方形の中心が図の中心に配置されます。
+</div>
+<ol>
+<li>Part Design → Pad（FreeCADの三段目、黄色）</li>
+<li>「タスク」の中の長さを20mmにする。（Padの長さを 20 mm に）</li>
+<li>「タスク」→ OK</li>
+</ol>
+<div class="box">
+これで、50 × 30 × 20 mmの立方体が完成します（左側のモデルの中に「Pad」が表示される）。
+</div>
+</section>
+<hr>
+
+<section>
+<h2>3．箱の内側を作る</h2>
+<ol>
+<li>直方体の上面をクリックして水色にする</li>
+<li>スケッチ（Mac最上段）→ 「新しいスケッチ」をクリック（新しいSketchを作る）<br>
+上面が正面から見えるスケッチ画面になる</li>
+<li>スケッチ（Mac最上段）→ 「ジオメトリー」→ 中心配置長方形を選ぶ</li>
+<li>赤線と緑線の交点（原点）をクリック</li>
+<li>右上方向へ動かして、もう一度クリック</li>
+<li>（escを１回押して、長方形作図モード終了）</li>
+<li>横を 45 mm にする（上記「3-直線」→ 「水平寸法」と同じ方法）</li>
+<li>縦を 25 mm にする（上記「4-直線」→ 「垂直寸法」と同じ方法）</li>
+<li>「タスク（右側）」→ 「閉じる」（Sketchを閉じる）</li>
+</ol>
+<div class="box">
+ここでも、中心配置長方形を使っているので、内側の四角形は外側の中心に揃います。
+</div>
+</section>
+<hr>
+
+<section>
+<h2>4．Pocketで箱にする</h2>
+<ol>
+<li>45×25 mmのSketchが選択された状態で、Pocketを選ぶ（FreeCADの三段目、青色）</li>
+<li>「タスク」中の「ポケットパラメーター」の長さを15 mmにする</li>
+<li>立体に四角いくぼみができることを確認する</li>
+<li>「タスク（右側）」→「OK」を押す</li>
+</ol>
+<div class="box">
+「モデル」の中に、「Pocket」ができている（これで完成）
+</div>
+</section>
+<hr>
+
+<div class="back-link">
+
+<a href="index.html">トップページに戻る</a>
+</div>
+
+</main>
+<footer>
+© 「重信」での農作業日記
+</footer>
+</body>
+</html>
